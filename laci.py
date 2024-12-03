@@ -29,15 +29,12 @@ def OszlopEllenorzes():
 
     szamlalo = 0
 
+
     for sor in matrix:
-        oszlop += sor[szamlalo]
+        oszlop += sor[j]
 
-        if len(oszlop) == 10:
-            szamlalo += 1
+    print(oszlop)
 
-        print(oszlop)
-
-        for 
             
         
         
