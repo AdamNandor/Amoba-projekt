@@ -9,20 +9,20 @@ for i in range(10):
     for j in range(10):
         sor.append(" ")
     matrix.append(sor)
-print("     1   2   3   4   5   6   7   8   9   10")    
+print("     1   2   3   4   5   6   7   8   9   10")
 def Megjelenit():
     szamlalo = 0
-    print("   -----------------------------------------")
+    print("   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐")
     for i in matrix:
         szamlalo += 1
         sor = " | ".join(i)
         
         if szamlalo != 10:
             print(f"{szamlalo}  | {sor} |")
-            print("   -----------------------------------------")
+            print("   ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤")
         else:
             print(f"{szamlalo} | {sor} |")
-            print("   -----------------------------------------")
+            print("   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘")
 
 def OszlopEllenorzes(vege):
     x_minta_1 = "xxxxx"
@@ -102,4 +102,3 @@ while not vege:
     KarakterRegisztralas(poz, karakter)
     Megjelenit()
     vege = Ellenorzes(vege)
-
