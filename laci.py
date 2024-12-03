@@ -9,7 +9,7 @@ for i in range(10):
     for j in range(10):
         sor.append(" ")
     matrix.append(sor)
-
+print("     1   2   3   4   5   6   7   8   9   10")    
 def Megjelenit():
     szamlalo = 0
     print("   -----------------------------------------")
