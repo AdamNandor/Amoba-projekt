@@ -1,56 +1,54 @@
 import random
 
-valasztas = "ox"
+vege = False
 
 matrix = []
 
 for i in range(10):
     sor = []
     for j in range(10):
-        sor.append(random.choice(valasztas))
+        sor.append(" ")
     matrix.append(sor)
-
-
-
-vege = False
 
 def Megjelenit():
     szamlalo = 0
-
+    print("   -----------------------------------------")
     for i in matrix:
         szamlalo += 1
         sor = " | ".join(i)
-        print(f"{szamlalo} | {sor} |")
+        
+        if szamlalo != 10:
+            print(f"{szamlalo}  | {sor} |")
+            print("   -----------------------------------------")
+        else:
+            print(f"{szamlalo} | {sor} |")
+            print("   -----------------------------------------")
 
-def OszlopEllenorzes():
+def OszlopEllenorzes(vege):
     x_minta_1 = "xxxxx"
     kor_minta_1 = "ooooo"
     oszlop = ""
 
-    szamlalo = 0
-
-
-    for sor in matrix:
-        oszlop += sor[j]
-
-    print(oszlop)
-
+    for i in range(10):
+        oszlop = ""
+        for sor in matrix:
+            oszlop += sor[i]
             
-        
-        
-    for _ in range(10):
         if x_minta_1 in oszlop:
             print(oszlop)
-            print("Az X nyert")
+            print("Az x nyert")
             vege = True
+            print(vege, "oszlop")
         elif kor_minta_1 in oszlop:
-            print(oszlop)
-            print("A O nyert")
+            print("A o nyert")
             vege = True
 
-        
+    if vege:
+        return vege
 
-def SorEllenorzes():
+
+
+def SorEllenorzes(vege):
     x_minta_1 = "xxxxx"
     kor_minta_1 = "ooooo"
 
@@ -58,22 +56,50 @@ def SorEllenorzes():
         sor = "".join(sor)
 
         if x_minta_1 in sor:
-            print(sor)
-            print("Az X nyert(sor)")
+            print("Az x nyert(sor)")
             vege = True
+            print(vege, "sor")
         elif kor_minta_1 in sor:
-            print(sor)
-            print("A O nyert (sor)")
+            print("A o nyert (sor)")
             vege = True
-
+    
+    if vege:
+        return vege
     
 
+def AtloEllenorzes(vege):
+    if vege:
+        return vege
+    
 
-def Ellenorzes():
-    SorEllenorzes()
-    OszlopEllenorzes()
+def Ellenorzes(vege):
+    vege = OszlopEllenorzes(vege)
+    vege = SorEllenorzes(vege)
+    vege = AtloEllenorzes(vege)
+
+    if vege:
+        return vege
+
+
+def KarakterRegisztralas(poz, karakter):
+    matrix[int(poz[0])-1][int(poz[1])-1] = karakter
+
+kor = False
 
 Megjelenit()
 
-Ellenorzes()
+while not vege:
+    if not kor:
+        poz = input("Kérem adja meg az x pozícióját (sor, oszlop) --> ").split(", ")
+        kor = True
+        karakter = "x"
+    elif kor:
+        poz = input("Kérem adja meg az o pozícióját (sor, oszlop) --> ").split(", ")
+        kor = False
+        karakter = "o"
+
+    
+    KarakterRegisztralas(poz, karakter)
+    Megjelenit()
+    vege = Ellenorzes(vege)
 
