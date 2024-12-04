@@ -1,47 +1,47 @@
-import random
+import os
 
-vege = False
-
-matrix = []
-
-for i in range(10):
-    sor = []
-    for j in range(10):
-        sor.append(" ")
-    matrix.append(sor)
 def Megjelenit():
+    os.system('cls')
     szamlalo = 0
-    print("     1   2   3   4   5   6   7   8   9   10")
-    print("   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐")
+    print("     1   2   3   4   5   6   7   8   9   10".center(200))
+    print("   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐".center(200))
     for i in matrix:
         szamlalo += 1
         sor = " | ".join(i)
         
         if szamlalo != 10:
-            print(f"{szamlalo}  | {sor} |")
-            print("   ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤")
+            print(f" {szamlalo} | {sor} |".center(200))
+            print("   ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤".center(200))
         else:
-            print(f"{szamlalo} | {sor} |")
-            print("   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘")
+            print(f"{szamlalo} | {sor} |".center(200))
+            print("   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘".center(200))
+
+
+def Eldontes(ellenorizendo, vege):
+    if x_minta in ellenorizendo:
+        Megjelenit()
+        print("Az x nyert")
+        vege = True
+    elif kor_minta in ellenorizendo:
+        Megjelenit()
+        print("Az x nyert")
+        vege = True
+    elif lepesek == 101 and not vege:
+        Megjelenit()
+        print("Döntetlen")
+        vege = True
+
+    if vege:
+        return vege
 
 def OszlopEllenorzes(vege):
-    x_minta_1 = "xxxxx"
-    kor_minta_1 = "ooooo"
     oszlop = ""
 
     for i in range(10):
         oszlop = ""
         for sor in matrix:
             oszlop += sor[i]
-            
-        if x_minta_1 in oszlop:
-            print(oszlop)
-            print("Az x nyert")
-            vege = True
-            print(vege, "oszlop")
-        elif kor_minta_1 in oszlop:
-            print("A o nyert")
-            vege = True
+        vege = Eldontes(oszlop, vege)
 
     if vege:
         return vege
@@ -49,33 +49,39 @@ def OszlopEllenorzes(vege):
 
 
 def SorEllenorzes(vege):
-    x_minta_1 = "xxxxx"
-    kor_minta_1 = "ooooo"
-
     for sor in matrix:
         sor = "".join(sor)
-
-        if x_minta_1 in sor:
-            print("Az x nyert(sor)")
-            vege = True
-            print(vege, "sor")
-        elif kor_minta_1 in sor:
-            print("A o nyert (sor)")
-            vege = True
+        
+        vege = Eldontes(sor, vege)
     
     if vege:
         return vege
-    
 
-def AtloEllenorzes(vege):
+def AtloEllenorzesJobb(vege):
+    for i in range(6):
+        for j in reversed(range(4, 10)):
+            atlo = ""
+            for x in range(5):
+                atlo += matrix[x+i][j-x]
+            vege = Eldontes(atlo, vege)
     if vege:
         return vege
-    
+
+def AtloEllenorzesBal(vege):
+    for i in range(6):
+        for j in range(6):
+            atlo = ""
+            for x in range(5):
+                atlo += matrix[x + i][x + j]
+            vege = Eldontes(atlo, vege)
+
+    return vege
 
 def Ellenorzes(vege):
     vege = OszlopEllenorzes(vege)
     vege = SorEllenorzes(vege)
-    vege = AtloEllenorzes(vege)
+    vege = AtloEllenorzesJobb(vege)
+    vege = AtloEllenorzesBal(vege)
 
     if vege:
         return vege
@@ -84,21 +90,56 @@ def Ellenorzes(vege):
 def KarakterRegisztralas(poz, karakter):
     matrix[int(poz[0])-1][int(poz[1])-1] = karakter
 
+
+def MatrixEpites():
+    matrix = []
+
+    for _ in range(10):
+        sor = []
+        for _ in range(10):
+            sor.append(" ")
+        matrix.append(sor)
+
+    return matrix
+
+def InputErvenyessegEldontes(kor, poz, karakter, vege):
+    if not 0 < int(poz[0]) <= 10 or not 0 < int(poz[1]) <= 10 :
+        print("a koordináták megadásánál a minimum érték 1 a maximum 10")
+    else:
+        if matrix[int(poz[0])-1][int(poz[1])-1] == " ":
+                kor ^= True
+                KarakterRegisztralas(poz, karakter)
+                Megjelenit()
+                vege = Ellenorzes(vege)
+        else:
+            print("Csak szabad/üres rublikákra tehet")
+
+    return kor, vege
+    
+
+
+matrix = MatrixEpites()
+kor_minta = "ooooo"
+x_minta = "xxxxx"
+vege = False
 kor = False
+
 
 Megjelenit()
 
-while not vege:
-    if not kor:
-        poz = input("Kérem adja meg az x pozícióját (sor, oszlop) --> ").split(", ")
-        kor = True
-        karakter = "x"
-    elif kor:
-        poz = input("Kérem adja meg az o pozícióját (sor, oszlop) --> ").split(", ")
-        kor = False
-        karakter = "o"
+lepesek = 0
 
-    
-    KarakterRegisztralas(poz, karakter)
-    Megjelenit()
-    vege = Ellenorzes(vege)
+while not vege:
+    if not kor and not vege:
+        poz = input("Kérem adja meg az x pozícióját (sor, oszlop) --> ").split(", ")
+        lepesek += 1
+        kor, vege = InputErvenyessegEldontes(kor, poz, "x", vege)
+
+    if kor and not vege:
+        poz = input("Kérem adja meg az o pozícióját (sor, oszlop) --> ").split(", ")
+        lepesek += 1
+
+        kor, vege = InputErvenyessegEldontes(kor, poz, "o", vege)
+
+        
+input("Nyomjon entert a kilépéshez")
