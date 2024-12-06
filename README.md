@@ -1,6 +1,71 @@
 # Amőba-projekt
 
-# Játékmenet
-Az amőba játéktere egy 10x10-es pálya
-A játék megnyeréséhez az x-nek vagy a o-nek egymás mellé kell helyezniük 5 darab figurát, vízszintesen függőlegesen vagy átlósan.
+# Játéktér mejelenítés, Megjelenítés eljárás
+A kereteket a rublikák között ┌ ─ ┬ ┐ ├ ─ ┼ ┤ └ ─ ┴ ┘ | karakterekkel rajzoltuk meg, a képen látható módon. A függvény továbbá letiszítja a képernyőről az eddigi információkat, így csak a pálya, az input mező és a játékhoz szükséges információk láthatóak
+
+![kép](https://github.com/user-attachments/assets/ebe34113-ea60-4ef1-8811-3e56ef75b056)
+
+# Ellenőrzés Függvény
+Az ellenőrzés függvény az oszlopok átlók és sorok ellenőrzéség hívja meg egyszerre így csak ezt az egy függvény kell megvívni ha le akarjuk ellenőrizni a játékteret. Ennek a függvények az ellenőrizendő stringet és a vege booleant kell megadni paraméternek
+
+![kép](https://github.com/user-attachments/assets/86dc812f-8da5-4744-b40d-3a1474368440)
+
+
+# Eldöntés Függvény
+ellenőrzi az egyesített oszlop, sor vagy átlóban szerepel-e egymás mellett 5 darab x vagy o és ha igen akkor a játékot leállítja. Ennek a függvénynek a vége booleant kell megadni paraméternek
+
+![kép](https://github.com/user-attachments/assets/4d18f5e1-6be8-40b6-af5e-0b2e0bcd8f6e)
+
+# Oszlopok Ellenőrzése
+A sorokat az ellenőrzéshez egy string-é alakítjuk át ezután meghívjuk az Eldöntés() függvényt aminek megadjuk a stringet és ellenőrzi a fentebb leírtak szerint. A vege boolent kell megadni paraméternek
+
+![kép](https://github.com/user-attachments/assets/1a9cd239-45f3-4d12-87a7-6224b6288a1e)
+
+# Sorok Ellenőrzése
+Az oszlopokhoz hasonlóan a sorokat is átalakítjuk egy string-é majd megvizsgáljuk az Eldöntés() függvénnyel. függvényparaméternek a vege boolent kell megadni
+
+![kép](https://github.com/user-attachments/assets/f61a70ac-d71e-410e-aea2-811880bee63c)
+
+# Átló Ellenőrzés
+a sorokhoz és oszlopokhoz hasonlóan az átlókat is átalakítjuk string-é ezután megvizsgáljuk az Eldöntés() függvénnyel. A jobbra és balra dőlő átlókat külön vizsgáljuk. Itt is a vege boolent kell megadni paraméternek
+
+![kép](https://github.com/user-attachments/assets/f1e4e3ed-8819-4f2d-be4d-ae6f9a7bcda6)
+![kép](https://github.com/user-attachments/assets/dc3a6fe7-435c-4e2a-aec5-8074d4203d85)
+
+
+# Karakter Regisztrálás 
+A karakterek regisztrálása vagyis a mátrixba helyezése a megfelelő pozícióra. Ennek a függvények regisztrálás pozícióját, és a regisztrálni kívánt karaktert kell megadni
+
+![kép](https://github.com/user-attachments/assets/8d8d6918-2329-4c6d-8621-6670c1ec21a2)
+
+# Mátrix létrehozása
+Ez a függvény hozza létre az üres mátrixot
+
+![kép](https://github.com/user-attachments/assets/80715f5a-4ae0-4f20-b017-f354c5d39b9c)
+
+
+# Az input érvényességének ellenőrzése
+Ez a függvény ellenőrzi hogy a felhasználó által megadott input helyes-e (A sor és oszlop maximum értéke csak 10 és hogy a megadott pozíció még üres-e). A függvény paraméterei a felhasználó által megadott pozíció, a játék végét ellenőrző boolean és a regisztrálni kívánt karakter
+
+![kép](https://github.com/user-attachments/assets/9fc6909b-8733-41c1-825c-566ff6332bc5)
+
+# Változók Deklarálása és játéktér megjelenítése
+A változók deklarálása, az üres mátrix létrehozása, nyerési minták megszabása, lépéseket számláló változó létrehozása, és a játéktér megjelnítése
+
+![kép](https://github.com/user-attachments/assets/f78e78b2-883b-475a-8b3d-32c35b7753e7)
+
+# Fő loop
+Ez a loop a fő játékmenet, a pozíciók bekérése és a szükséges függvények meghívása itt történik
+
+![kép](https://github.com/user-attachments/assets/46321808-ddbc-4376-973d-49b5d4a2c691)
+
+
+# Egyéb megjegyzés
+A pogram során a vege boolean a legtöbb függvényben szerepel a paraméterekben
+
+Az egyetlen importálható modul amit használtunk az os modul Ebből az os.system('cls') parancsot használtuk amely letísztítja a terminált
+![kép](https://github.com/user-attachments/assets/62cbe132-f9e4-4eb7-96de-d3e42d7ce16d)
+
+A játéktér középreigazítását egy 1920x1080p-s kijelzőn teszteltük teljes képernyős módban a visual studo code-ban.
+
 
