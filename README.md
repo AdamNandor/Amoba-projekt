@@ -69,4 +69,6 @@ Az egyetlen importálható modul amit használtunk az os modul Ebből az os.syst
 
 A játéktér középreigazítását egy 1920x1080p-s kijelzőn teszteltük teljes képernyős módban a visual studo code-ban.
 
+![kép](https://github.com/user-attachments/assets/197ea581-6df2-4808-bca3-144a72326b93)
+
 
