@@ -28,7 +28,7 @@ def Eldontes(ellenorizendo, vege):
         vege = True
     elif lepesek == 101 and not vege:
         Megjelenit()
-        print("Döntetlen".center(1943,))
+        print("Döntetlen".center(194))
         vege = True
 
     if vege:
@@ -62,8 +62,9 @@ def AtloEllenorzesJobb(vege):
         for j in reversed(range(4, 10)):
             atlo = ""
             for x in range(5):
-                atlo += matrix[x+i][j-x]
+                atlo += matrix[x + i][j - x]
             vege = Eldontes(atlo, vege)
+
     if vege:
         return vege
 
@@ -75,7 +76,8 @@ def AtloEllenorzesBal(vege):
                 atlo += matrix[x + i][x + j]
             vege = Eldontes(atlo, vege)
 
-    return vege
+    if vege:
+        return vege
 
 def Ellenorzes(vege):
     vege = OszlopEllenorzes(vege)
@@ -123,16 +125,17 @@ kor_minta = "ooooo"
 x_minta = "xxxxx"
 vege = False
 kor = False
+lepesek = 0
 
 
 Megjelenit()
 
-lepesek = 0
 
 while not vege:
     if not kor and not vege:
         poz = input("Kérem adja meg az x pozícióját (sor, oszlop) --> ").split(", ")
         lepesek += 1
+        
         kor, vege = InputErvenyessegEldontes(kor, poz, "x", vege)
 
     if kor and not vege:
