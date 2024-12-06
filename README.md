@@ -64,6 +64,7 @@ Ez a loop a fő játékmenet, a pozíciók bekérése és a szükséges függvé
 A pogram során a vege boolean a legtöbb függvényben szerepel a paraméterekben
 
 Az egyetlen importálható modul amit használtunk az os modul Ebből az os.system('cls') parancsot használtuk amely letísztítja a terminált
+
 ![kép](https://github.com/user-attachments/assets/62cbe132-f9e4-4eb7-96de-d3e42d7ce16d)
 
 A játéktér középreigazítását egy 1920x1080p-s kijelzőn teszteltük teljes képernyős módban a visual studo code-ban.
