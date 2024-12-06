@@ -71,4 +71,11 @@ A játéktér középreigazítását egy 1920x1080p-s kijelzőn teszteltük telj
 
 ![kép](https://github.com/user-attachments/assets/197ea581-6df2-4808-bca3-144a72326b93)
 
+# Játék Használata
+A játékban a koordinátákat vesszővel és egy space-el elválasztva kell megadni a minta szerint: sor, oszlop [példa: 4, 5 (Ez a 4. sor 5. oszlopát jelenti)]
+
+![kép](https://github.com/user-attachments/assets/ea0e12e1-592a-4c4c-ba5a-9aba295623c9)
+
+
+
 
