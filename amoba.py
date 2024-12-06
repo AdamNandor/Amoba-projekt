@@ -3,32 +3,32 @@ import os
 def Megjelenit():
     os.system('cls')
     szamlalo = 0
-    print("     1   2   3   4   5   6   7   8   9   10".center(20))
-    print("   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐".center(20))
+    print("     1   2   3   4   5   6   7   8   9   10".center(190))
+    print("   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐".center(190))
     for i in matrix:
         szamlalo += 1
         sor = " | ".join(i)
         
         if szamlalo != 10:
-            print(f" {szamlalo} | {sor} |".center(20))
-            print("   ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤".center(20))
+            print(f" {szamlalo} | {sor} |".center(190))
+            print("   ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤".center(190))
         else:
-            print(f"{szamlalo} | {sor} |".center(20))
-            print("   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘".center(20))
+            print(f"{szamlalo} | {sor} |".center(190))
+            print("   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘".center(190))
 
 
 def Eldontes(ellenorizendo, vege):
     if x_minta in ellenorizendo:
         Megjelenit()
-        print("Az x nyert")
+        print("Az x nyert".center(194))
         vege = True
     elif kor_minta in ellenorizendo:
         Megjelenit()
-        print("Az x nyert")
+        print("A o nyert".center(194))
         vege = True
     elif lepesek == 101 and not vege:
         Megjelenit()
-        print("Döntetlen")
+        print("Döntetlen".center(1943,))
         vege = True
 
     if vege:
