@@ -1,7 +1,7 @@
 import os
 
 def Megjelenit():
-    kozep = os.get_terminal_size()[0] -20
+    kozep = os.get_terminal_size()[0] -10
     os.system('cls')
     szamlalo = 0
     print("     1   2   3   4   5   6   7   8   9   10".center(kozep))
@@ -18,18 +18,17 @@ def Megjelenit():
             print("   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘".center(kozep))
 
 def Eldontes(ellenorizendo, vege):
-    vege_felirat_kozep = os.get_terminal_size()[0] -16
     if x_minta in ellenorizendo:
         Megjelenit()
-        print("Az x nyert".center(vege_felirat_kozep))
+        print("Az x nyert\n")
         vege = True
     elif kor_minta in ellenorizendo:
         Megjelenit()
-        print("A o nyert".center(vege_felirat_kozep))
+        print("A o nyert\n")
         vege = True
     elif lepesek == 101 and not vege:
         Megjelenit()
-        print("Döntetlen".center(vege_felirat_kozep))
+        print("Döntetlen\n")
         vege = True
 
     if vege:
@@ -147,10 +146,3 @@ while not vege:
 
         
 input("Nyomjon entert a kilépéshez")
-        
-    
-    
-
-    
-    
-    
