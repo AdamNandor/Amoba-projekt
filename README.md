@@ -3,7 +3,7 @@
 # Játéktér mejelenítés, Megjelenítés eljárás
 A kereteket a rublikák között ┌ ─ ┬ ┐ ├ ─ ┼ ┤ └ ─ ┴ ┘ | karakterekkel rajzoltuk meg, a képen látható módon. A függvény továbbá letiszítja a képernyőről az eddigi információkat, így csak a pálya, az input mező és a játékhoz szükséges információk láthatóak
 
-![kép](https://github.com/user-attachments/assets/ebe34113-ea60-4ef1-8811-3e56ef75b056)
+![kép](https://github.com/user-attachments/assets/62486f2e-67c0-4340-846e-c58f1138f82d)
 
 # Ellenőrzés Függvény
 Az ellenőrzés függvény az oszlopok átlók és sorok ellenőrzéség hívja meg egyszerre így csak ezt az egy függvény kell megvívni ha le akarjuk ellenőrizni a játékteret. Ennek a függvények az ellenőrizendő stringet és a vege booleant kell megadni paraméternek
@@ -14,7 +14,7 @@ Az ellenőrzés függvény az oszlopok átlók és sorok ellenőrzéség hívja 
 # Eldöntés Függvény
 ellenőrzi az egyesített oszlop, sor vagy átlóban szerepel-e egymás mellett 5 darab x vagy o és ha igen akkor a játékot leállítja. Ennek a függvénynek a vége booleant kell megadni paraméternek
 
-![kép](https://github.com/user-attachments/assets/4d18f5e1-6be8-40b6-af5e-0b2e0bcd8f6e)
+![kép](https://github.com/user-attachments/assets/7568c523-0b94-4085-b4e6-0d34e38bb540)
 
 # Oszlopok Ellenőrzése
 A sorokat az ellenőrzéshez egy string-é alakítjuk át ezután meghívjuk az Eldöntés() függvényt aminek megadjuk a stringet és ellenőrzi a fentebb leírtak szerint. A vege boolent kell megadni paraméternek
@@ -63,13 +63,14 @@ Ez a loop a fő játékmenet, a pozíciók bekérése és a szükséges függvé
 # Egyéb megjegyzés
 A pogram során a vege boolean a legtöbb függvényben szerepel a paraméterekben
 
-Az egyetlen importálható modul amit használtunk az os modul Ebből az os.system('cls') parancsot használtuk amely letísztítja a terminált
+Az importálható modul amit használtunk az os modul Ebből az os.system('cls') parancsot használtuk amely letísztítja a terminált és az os.get_terminal_size() parancsot ami megadja a terminál szélességét ez a középreigazítás szempontjából volt fontos
 
 ![kép](https://github.com/user-attachments/assets/62cbe132-f9e4-4eb7-96de-d3e42d7ce16d)
 
 A játéktér középreigazítását egy 1920x1080p-s kijelzőn teszteltük teljes képernyős módban a visual studo code-ban.
 
 ![kép](https://github.com/user-attachments/assets/197ea581-6df2-4808-bca3-144a72326b93)
+![kép](https://github.com/user-attachments/assets/707080fe-111e-4d5a-a56b-413b5e4f7c83)
 
 # Játék Használata
 A játékban a koordinátákat vesszővel és egy space-el elválasztva kell megadni a minta szerint: sor, oszlop [példa: 4, 5 (Ez a 4. sor 5. oszlopát jelenti)]
