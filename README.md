@@ -14,7 +14,7 @@ Az ellenőrzés függvény az oszlopok átlók és sorok ellenőrzéség hívja 
 # Eldöntés Függvény
 ellenőrzi az egyesített oszlop, sor vagy átlóban szerepel-e egymás mellett 5 darab x vagy o és ha igen akkor a játékot leállítja. Ennek a függvénynek a vége booleant kell megadni paraméternek
 
-![kép](https://github.com/user-attachments/assets/7568c523-0b94-4085-b4e6-0d34e38bb540)
+![kép](https://github.com/user-attachments/assets/0d583e93-e782-4f4d-929b-26461b4c3313)
 
 # Oszlopok Ellenőrzése
 A sorokat az ellenőrzéshez egy string-é alakítjuk át ezután meghívjuk az Eldöntés() függvényt aminek megadjuk a stringet és ellenőrzi a fentebb leírtak szerint. A vege boolent kell megadni paraméternek
