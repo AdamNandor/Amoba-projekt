@@ -18,18 +18,18 @@ def Megjelenit():
             print("   └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘".center(kozep))
 
 def Eldontes(ellenorizendo, vege):
-    vege_kozep = os.get_terminal_size()[0] -16
+    vege_felirat_kozep = os.get_terminal_size()[0] -16
     if x_minta in ellenorizendo:
         Megjelenit()
-        print("Az x nyert".center(vege_kozep))
+        print("Az x nyert".center(vege_felirat_kozep))
         vege = True
     elif kor_minta in ellenorizendo:
         Megjelenit()
-        print("A o nyert".center(vege_kozep))
+        print("A o nyert".center(vege_felirat_kozep))
         vege = True
     elif lepesek == 101 and not vege:
         Megjelenit()
-        print("Döntetlen".center(vege_kozep))
+        print("Döntetlen".center(vege_felirat_kozep))
         vege = True
 
     if vege:
