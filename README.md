@@ -63,14 +63,16 @@ Ez a loop a fő játékmenet, a pozíciók bekérése és a szükséges függvé
 # Egyéb megjegyzés
 A pogram során a vege boolean a legtöbb függvényben szerepel a paraméterekben
 
-Az importálható modul amit használtunk az os modul Ebből az os.system('cls') parancsot használtuk amely letísztítja a terminált és az os.get_terminal_size() parancsot ami megadja a terminál szélességét ez a középreigazítás szempontjából volt fontos
+Az importálható modul amit használtunk az os modul Ebből az os.system('cls') parancsot használtuk amely letísztítja a terminált és az os.get_terminal_size() parancsot ami megadja a terminál szélességét ez a középreigazítás szempontjából volt fontos. A megjelenítés során történik meg a terminál letiszítása és a játéktér középre igazítása így ha a játéktér változna akkor a megjelenítést követően ismét középen lesz a játéktér.
 
 ![kép](https://github.com/user-attachments/assets/62cbe132-f9e4-4eb7-96de-d3e42d7ce16d)
-
-A játéktér középreigazítását egy 1920x1080p-s kijelzőn teszteltük teljes képernyős módban a visual studo code-ban.
-
-![kép](https://github.com/user-attachments/assets/197ea581-6df2-4808-bca3-144a72326b93)
 ![kép](https://github.com/user-attachments/assets/707080fe-111e-4d5a-a56b-413b5e4f7c83)
+![kép](https://github.com/user-attachments/assets/197ea581-6df2-4808-bca3-144a72326b93)
+
+![kép](https://github.com/user-attachments/assets/d689d48a-7662-4869-8699-4117c6c094bd)
+![kép](https://github.com/user-attachments/assets/71af1261-2bf8-4029-a583-24ce1054339a)
+
+
 
 # Játék Használata
 A játékban a koordinátákat vesszővel és egy space-el elválasztva kell megadni a minta szerint: sor, oszlop [példa: 4, 5 (Ez a 4. sor 5. oszlopát jelenti)]
