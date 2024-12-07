@@ -67,10 +67,10 @@ Az importálható modul amit használtunk az os modul Ebből az os.system('cls')
 
 ![kép](https://github.com/user-attachments/assets/62cbe132-f9e4-4eb7-96de-d3e42d7ce16d)
 ![kép](https://github.com/user-attachments/assets/707080fe-111e-4d5a-a56b-413b5e4f7c83)
-![kép](https://github.com/user-attachments/assets/197ea581-6df2-4808-bca3-144a72326b93)
 
-![kép](https://github.com/user-attachments/assets/d689d48a-7662-4869-8699-4117c6c094bd)
-![kép](https://github.com/user-attachments/assets/71af1261-2bf8-4029-a583-24ce1054339a)
+![kép](https://github.com/user-attachments/assets/ca81aedb-cf2b-415d-9360-2ea2caaad78c)
+![kép](https://github.com/user-attachments/assets/feaaffca-827b-4228-ab2f-db953e8a2a9d)
+
 
 
 
