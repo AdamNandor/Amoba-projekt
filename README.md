@@ -3,7 +3,8 @@
 # Játéktér mejelenítés, Megjelenítés eljárás
 A kereteket a rublikák között ┌ ─ ┬ ┐ ├ ─ ┼ ┤ └ ─ ┴ ┘ | karakterekkel rajzoltuk meg, a képen látható módon. A függvény továbbá letiszítja a képernyőről az eddigi információkat, így csak a pálya, az input mező és a játékhoz szükséges információk láthatóak
 
-![kép](https://github.com/user-attachments/assets/62486f2e-67c0-4340-846e-c58f1138f82d)
+![kép](https://github.com/user-attachments/assets/eb8c8558-5899-45d0-90e7-6507ac3a5b5b)
+
 
 # Ellenőrzés Függvény
 Az ellenőrzés függvény az oszlopok átlók és sorok ellenőrzéség hívja meg egyszerre így csak ezt az egy függvény kell megvívni ha le akarjuk ellenőrizni a játékteret. Ennek a függvények az ellenőrizendő stringet és a vege booleant kell megadni paraméternek
