@@ -1,8 +1,11 @@
 import os
 
 def Megjelenit():
-    kozep = os.get_terminal_size()[0] -10
+    kozep = os.get_terminal_size()[0] -8
+    magassag = os.get_terminal_size()[1]//2-12
     os.system('cls')
+    for _ in range(magassag):
+        print("")
     szamlalo = 0
     print("     1   2   3   4   5   6   7   8   9   10".center(kozep))
     print("   ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐".center(kozep))
@@ -133,13 +136,13 @@ Megjelenit()
 
 while not vege:
     if not kor and not vege:
-        poz = input("Kérem adja meg az x pozícióját (sor, oszlop) --> ").split(", ")
+        poz = input("\nKérem adja meg az x pozícióját (sor, oszlop) --> ").split(", ")
         lepesek += 1
         
         kor, vege = InputErvenyessegEldontes(kor, poz, "x", vege)
 
     if kor and not vege:
-        poz = input("Kérem adja meg az o pozícióját (sor, oszlop) --> ").split(", ")
+        poz = input("\nKérem adja meg az o pozícióját (sor, oszlop) --> ").split(", ")
         lepesek += 1
 
         kor, vege = InputErvenyessegEldontes(kor, poz, "o", vege)
