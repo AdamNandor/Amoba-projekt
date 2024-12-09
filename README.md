@@ -1,4 +1,5 @@
 # Amőba-projekt
+A végleges játék a GitHub-on a file-ok között amoba_final.py néven található meg.
 
 # Játéktér mejelenítés, Megjelenítés eljárás
 A kereteket a rublikák között ┌ ─ ┬ ┐ ├ ─ ┼ ┤ └ ─ ┴ ┘ | karakterekkel rajzoltuk meg, a képen látható módon. A függvény továbbá letiszítja a képernyőről az eddigi információkat, így csak a pálya, az input mező és a játékhoz szükséges információk láthatóak
