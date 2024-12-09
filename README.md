@@ -49,7 +49,7 @@ Ez a függvény hozza létre az üres mátrixot
 # Az input érvényességének ellenőrzése
 Ez a függvény ellenőrzi hogy a felhasználó által megadott input helyes-e (A sor és oszlop maximum értéke csak 10 és hogy a megadott pozíció még üres-e). A függvény paraméterei a felhasználó által megadott pozíció, a játék végét ellenőrző boolean és a regisztrálni kívánt karakter
 
-![kép](https://github.com/user-attachments/assets/9fc6909b-8733-41c1-825c-566ff6332bc5)
+![kép](https://github.com/user-attachments/assets/fff7ccf4-ec81-4e0c-9b2a-451c3d4275ef)
 
 # Változók Deklarálása és játéktér megjelenítése
 A változók deklarálása, az üres mátrix létrehozása, nyerési minták megszabása, lépéseket számláló változó létrehozása, és a játéktér megjelnítése
@@ -59,7 +59,7 @@ A változók deklarálása, az üres mátrix létrehozása, nyerési minták meg
 # Fő loop
 Ez a loop a fő játékmenet, a pozíciók bekérése és a szükséges függvények meghívása itt történik
 
-![kép](https://github.com/user-attachments/assets/46321808-ddbc-4376-973d-49b5d4a2c691)
+![kép](https://github.com/user-attachments/assets/53b24995-cc79-418e-91eb-ea41314e78ec)
 
 
 # Egyéb megjegyzés
