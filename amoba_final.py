@@ -107,19 +107,20 @@ def MatrixEpites():
 
     return matrix
 
-def InputErvenyessegEldontes(kor, poz, karakter, vege):
+def InputErvenyessegEldontes(kor, poz, karakter, vege, lepesek):
     if not 0 < int(poz[0]) <= 10 or not 0 < int(poz[1]) <= 10 :
         print("a koordináták megadásánál a minimum érték 1 a maximum 10")
     else:
         if matrix[int(poz[0])-1][int(poz[1])-1] == " ":
                 kor ^= True
+                lepesek += 1
                 KarakterRegisztralas(poz, karakter)
                 Megjelenit()
                 vege = Ellenorzes(vege)
         else:
             print("Csak szabad/üres rublikákra tehet")
 
-    return kor, vege
+    return kor, vege, lepesek
     
 
 
@@ -137,15 +138,13 @@ Megjelenit()
 while not vege:
     if not kor and not vege:
         poz = input("\nKérem adja meg az x pozícióját (sor, oszlop) --> ").split(", ")
-        lepesek += 1
         
-        kor, vege = InputErvenyessegEldontes(kor, poz, "x", vege)
+        kor, vege, lepesek = InputErvenyessegEldontes(kor, poz, "x", vege, lepesek)
 
     if kor and not vege:
         poz = input("\nKérem adja meg az o pozícióját (sor, oszlop) --> ").split(", ")
-        lepesek += 1
 
-        kor, vege = InputErvenyessegEldontes(kor, poz, "o", vege)
+        kor, vege, lepesek = InputErvenyessegEldontes(kor, poz, "o", vege, lepesek)
 
         
 input("Nyomjon entert a kilépéshez")
