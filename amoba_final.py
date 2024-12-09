@@ -29,7 +29,7 @@ def Eldontes(ellenorizendo, vege):
         Megjelenit()
         print("A o nyert\n")
         vege = True
-    elif lepesek == 101 and not vege:
+    elif lepesek == 99 and not vege:
         Megjelenit()
         print("Döntetlen\n")
         vege = True
@@ -137,11 +137,13 @@ Megjelenit()
 
 while not vege:
     if not kor and not vege:
+        print(lepesek)
         poz = input("\nKérem adja meg az x pozícióját (sor, oszlop) --> ").split(", ")
         
         kor, vege, lepesek = InputErvenyessegEldontes(kor, poz, "x", vege, lepesek)
 
     if kor and not vege:
+        print(lepesek)
         poz = input("\nKérem adja meg az o pozícióját (sor, oszlop) --> ").split(", ")
 
         kor, vege, lepesek = InputErvenyessegEldontes(kor, poz, "o", vege, lepesek)
